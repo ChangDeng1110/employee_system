@@ -8,11 +8,27 @@
 
 #include <iostream>
 #include "WokerManager.hpp"
+#include "worker.h"
+#include "employee.h"
+#include "Manager.h"
+#include "Boss.h"
 using namespace std;
 
 
 int main()
 {
+//    Worker *worker = NULL;
+//    worker = new Employee(1,"tom",1);
+//    worker->showInfo();
+//
+//    Manager *manager = NULL;
+//    manager = new Manager(2,"neo",2);
+//    manager->showInfo();
+//
+//    Boss *boss = NULL;
+//    boss = new Boss(2,"neo",2);
+//    boss->showInfo();
+    
     WorkerManager wm;
     int choice = 0;
 
@@ -39,7 +55,7 @@ int main()
                 break;
             case 7:
                 break;
-                
+
             default:
                 break;
         }

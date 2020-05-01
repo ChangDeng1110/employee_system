@@ -9,6 +9,7 @@
 #ifndef WokerManager_hpp
 #define WokerManager_hpp
 
+#pragma once
 #include <stdio.h>
 #include <iostream>
 
@@ -16,6 +17,7 @@ using namespace std;
 
 class WorkerManager
 {
+    
 public:
     WorkerManager();
     void Show_Menu();

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6D517885245BC92200820878 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D517884245BC92200820878 /* main.cpp */; };
 		6D517891245BCE1B00820878 /* WokerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D51788F245BCE1B00820878 /* WokerManager.cpp */; };
+		6D517898245C07B900820878 /* employee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D517897245C07B900820878 /* employee.cpp */; };
+		6D51789B245C112000820878 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D51789A245C112000820878 /* Manager.cpp */; };
+		6D5178A0245C134D00820878 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D51789F245C134D00820878 /* Boss.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,13 @@
 		6D517884245BC92200820878 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6D51788F245BCE1B00820878 /* WokerManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WokerManager.cpp; sourceTree = "<group>"; };
 		6D517890245BCE1B00820878 /* WokerManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WokerManager.hpp; sourceTree = "<group>"; };
+		6D517895245C063C00820878 /* worker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = worker.h; sourceTree = "<group>"; };
+		6D517896245C072400820878 /* employee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = employee.h; sourceTree = "<group>"; };
+		6D517897245C07B900820878 /* employee.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = employee.cpp; sourceTree = "<group>"; };
+		6D517899245C10A000820878 /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		6D51789A245C112000820878 /* Manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
+		6D51789C245C130800820878 /* Boss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
+		6D51789F245C134D00820878 /* Boss.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boss.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,13 @@
 				6D517884245BC92200820878 /* main.cpp */,
 				6D51788F245BCE1B00820878 /* WokerManager.cpp */,
 				6D517890245BCE1B00820878 /* WokerManager.hpp */,
+				6D517895245C063C00820878 /* worker.h */,
+				6D517896245C072400820878 /* employee.h */,
+				6D517897245C07B900820878 /* employee.cpp */,
+				6D51789F245C134D00820878 /* Boss.cpp */,
+				6D517899245C10A000820878 /* Manager.h */,
+				6D51789A245C112000820878 /* Manager.cpp */,
+				6D51789C245C130800820878 /* Boss.h */,
 			);
 			path = employee;
 			sourceTree = "<group>";
@@ -126,6 +143,9 @@
 			files = (
 				6D517891245BCE1B00820878 /* WokerManager.cpp in Sources */,
 				6D517885245BC92200820878 /* main.cpp in Sources */,
+				6D517898245C07B900820878 /* employee.cpp in Sources */,
+				6D51789B245C112000820878 /* Manager.cpp in Sources */,
+				6D5178A0245C134D00820878 /* Boss.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
