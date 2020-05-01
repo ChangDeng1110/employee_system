@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D517885245BC92200820878 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D517884245BC92200820878 /* main.cpp */; };
+		6D51788E245BCD1300820878 /* WokerManeger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D51788C245BCD1300820878 /* WokerManeger.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		6D517881245BC92200820878 /* employee */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = employee; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D517884245BC92200820878 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6D51788C245BCD1300820878 /* WokerManeger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WokerManeger.cpp; sourceTree = "<group>"; };
+		6D51788D245BCD1300820878 /* WokerManeger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WokerManeger.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				6D517884245BC92200820878 /* main.cpp */,
+				6D51788C245BCD1300820878 /* WokerManeger.cpp */,
+				6D51788D245BCD1300820878 /* WokerManeger.hpp */,
 			);
 			path = employee;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D51788E245BCD1300820878 /* WokerManeger.cpp in Sources */,
 				6D517885245BC92200820878 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
