@@ -1,26 +1,25 @@
 //
-//  WokerManeger.hpp
+//  WokerManager.hpp
 //  employee
 //
 //  Created by Chang Deng on 2020/5/1.
 //  Copyright © 2020 Chang Deng. All rights reserved.
 //
 
-#ifndef WokerManeger_hpp
-#define WokerManeger_hpp
+#ifndef WokerManager_hpp
+#define WokerManager_hpp
 
 #include <stdio.h>
 #include <iostream>
 
-
 using namespace std;
 
-class WorkerManeger
+class WorkerManager
 {
 public:
-    WorkerManeger();
-    ~WokerManeger();
-}
+    WorkerManager();
+    void showMenu();
+    ~WorkerManager();
+};
 
-
-#endif /* WokerManeger_hpp */
+#endif /* WokerManager_hpp */
