@@ -54,6 +54,28 @@ WorkerManager::WorkerManager()
     int num = this->get_EmpNum();
     cout << "emplpoyee number is: " << num << endl;
     this->m_EmpNum = num;
+    
+    this ->m_EmpArray = new Worker * [this->m_EmpNum];
+    this -> init_Emp();
+//    for(int i = 0; i < this->m_EmpNum; i++)
+//    {
+//        cout << this->m_EmpArray[i]->m_id << this->m_EmpArray[i]->m_name << this->m_EmpArray[i]->m_DeptId << endl;
+//    }
+}
+
+void WorkerManager::show_Emp()
+{
+    if(this->m_fileIsEmpty)
+    {
+        cout << "no file or empty file!";
+    }
+    else
+    {
+        for(int i = 0; i < this->m_EmpNum; i++)
+        {
+            this->m_EmpArray[i]->showInfo();
+        }
+    }
 }
 
 void WorkerManager::Show_Menu()
@@ -163,7 +185,44 @@ void WorkerManager::Add_Emp()
     }
 }
 
+void WorkerManager::init_Emp()
+{
+    ifstream ifs;
+    ifs.open(FILENAME,ios::in);
+    
+    int id;
+    string name;
+    int dId;
+    
+    int index = 0;
+    
+    while (ifs >> id && ifs >> name && ifs >> dId)
+    {
+        Worker * worker = NULL;
+        if(dId == 1)
+        {
+            worker = new Employee(id,name,dId);
+        }
+        else if(dId == 2)
+        {
+            worker = new Manager(id,name,dId);
+        }
+        else
+        {
+            worker = new Boss(id,name,dId);
+        }
+        this->m_EmpArray[index] = worker;
+        index ++;
+    }
+    
+    ifs.close();
+}
+
 WorkerManager::~WorkerManager()
 {
-    
+    if(this->m_EmpArray != NULL)
+    {
+        delete [] this -> m_EmpArray;
+        this -> m_EmpArray = NULL;
+    }
 }

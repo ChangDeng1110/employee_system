@@ -34,6 +34,8 @@ public:
     void save();
     bool m_fileIsEmpty;
     int get_EmpNum();
+    void init_Emp();
+    void show_Emp();
     ~WorkerManager();
 
 };

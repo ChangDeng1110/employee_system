@@ -45,6 +45,7 @@ int main()
                 wm.Add_Emp();
                 break;
             case 2:
+                wm.show_Emp();
                 break;
             case 3:
                 break;
