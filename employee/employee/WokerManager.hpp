@@ -18,7 +18,8 @@ class WorkerManager
 {
 public:
     WorkerManager();
-    void showMenu();
+    void Show_Menu();
+    void exitSystem();
     ~WorkerManager();
 };
 
