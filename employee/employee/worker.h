@@ -17,7 +17,6 @@ using namespace std;
 
 class Worker
 {
-    
 public:
     int m_id;
     string m_name;

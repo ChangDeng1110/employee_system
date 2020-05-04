@@ -26,6 +26,110 @@ int WorkerManager::get_EmpNum()
     return num;
 }
 
+void WorkerManager::Del_Emp()
+{
+    if(this->m_fileIsEmpty)
+    {
+        cout << "No file" << endl;
+    }
+    else
+    {
+        cout << "input the id number for deleting: ";
+        int id;
+        cin >> id;
+        int index = this->IsExist(id);
+        if(index != -1)
+        {
+            for(int i = index; i < this->m_EmpNum - 1; i++)
+            {
+                this->m_EmpArray[i] = this->m_EmpArray[i+1];
+            }
+            this->m_EmpNum --;
+            this->save();
+            cout << "delete sucessful!" << endl;
+        }
+        else
+        {
+            cout << "can not find this people!" << endl;
+        }
+    }
+}
+
+int WorkerManager::IsExist(int id)
+{
+    int index = -1;
+    for(int i = 0; i < this->m_EmpNum; i++)
+    {
+        if(this->m_EmpArray[i]->m_id == id)
+        {
+            index = i;
+            break;
+        }
+    }
+    
+    return index;
+}
+
+
+void WorkerManager::Mod_Emp()
+{
+    if(this->m_fileIsEmpty)
+    {
+        cout << "No file" << endl;
+    }
+    else
+    {
+        cout << "input modify ID: ";
+        int id;
+        cin >> id;
+        
+        int ret = this->IsExist(id);
+        
+        if(ret != -1)
+        {
+            delete this->m_EmpArray[ret];
+            
+            int newId = 0;
+            string newName = "";
+            int newDep = 0;
+            
+            cout << "find id " << id << ", please input new ID : ";
+            cin >> newId;
+            cout << "please input new name : ";
+            cin >> newName;
+            cout << "please input new department id : ";
+            cout << "1. programmer, 2. manager, 3. boss" << endl;
+            cin >> newDep;
+            
+            Worker * worker = NULL;
+            switch (newDep) {
+                case 1:
+                    worker = new Employee(newId,newName,newDep);
+                    break;
+                case 2:
+                    worker = new Manager(newId,newName,newDep);
+                    break;
+                case 3:
+                    worker = new Boss(newId,newName,newDep);
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+            this->m_EmpArray[ret] = worker;
+            cout << "modify sucessful!" << endl;
+            this->save();
+            
+        }
+        else
+        {
+            cout << "can not find this people!" << endl;
+        }
+    }
+    
+}
+
 WorkerManager::WorkerManager()
 {
     ifstream ifs;
@@ -220,9 +324,8 @@ void WorkerManager::init_Emp()
 
 WorkerManager::~WorkerManager()
 {
-    if(this->m_EmpArray != NULL)
+    if (this->m_EmpArray != NULL)
     {
-        delete [] this -> m_EmpArray;
-        this -> m_EmpArray = NULL;
+        delete[] this->m_EmpArray;
     }
 }

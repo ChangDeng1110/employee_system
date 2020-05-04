@@ -36,6 +36,9 @@ public:
     int get_EmpNum();
     void init_Emp();
     void show_Emp();
+    void Del_Emp();
+    int IsExist(int id);
+    void Mod_Emp();
     ~WorkerManager();
 
 };
